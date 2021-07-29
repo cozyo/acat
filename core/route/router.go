@@ -32,6 +32,7 @@ func InitRouter(accessInfoLogger, accessErrLogger io.Writer) *gin.Engine {
 
 // boot Define your route model
 func boot(Route *gin.Engine)  {
-	router.ApiRouter(Route)
+	router.PublicRouter(Route)
 	router.WebRouter(Route)
+	router.ApiRouter(Route)
 }
