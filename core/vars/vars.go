@@ -19,5 +19,7 @@ var (
 	AccessLogger           log.LoggerContextIface
 	RedisPoolEngine        *redis.Pool
 	ServerSetting          *setting.ServerSettings
+	Arr                    *setting.HelperSettings
+	Str                    *setting.HelperSettings
 )
 

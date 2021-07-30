@@ -6,7 +6,6 @@ import (
 	"github.com/acat/core/vars"
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"time"
 )
 
 func IndexApi(c *gin.Context)  {
@@ -14,5 +13,5 @@ func IndexApi(c *gin.Context)  {
 }
 
 func PingApi(c *gin.Context)  {
-	Http.JsonResponse(c, http.StatusOK, code.SUCCESS, time.Now())
+	Http.JsonResponse(c, http.StatusOK, code.SUCCESS, "")
 }

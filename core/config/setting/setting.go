@@ -40,3 +40,8 @@ type RedisSettings struct {
 	PoolNum     int
 }
 
+// HelperSettings ...
+type HelperSettings struct {
+	Arr      func()
+	Str      func()
+}

@@ -4,6 +4,8 @@ import (
 	"github.com/acat/app/Http/Middleware"
 	"github.com/acat/core/vars"
 	"github.com/acat/router"
+	"github.com/gin-contrib/sessions"
+	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	"io"
 	"log"
@@ -23,6 +25,9 @@ func InitRouter(accessInfoLogger, accessErrLogger io.Writer) *gin.Engine {
 
 	r := gin.New()
 	r.Use(Middleware.Cors())
+	// cookie-based
+	store := cookie.NewStore([]byte("secret"))
+	r.Use(sessions.Sessions("mhjy_gm", store))
 	boot(r)
 
 	log.Println("监听端口", "http://127.0.0.1:52001")

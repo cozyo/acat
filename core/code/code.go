@@ -20,6 +20,7 @@ const (
 	ErrorShopIdNotExist       = 4014
 	ErrorShopIdExist          = 4015
 	ErrorInviteCodeNotExist   = 4016
+	ErrorImageCaptch          = 4017
 	DbDuplicateEntry          = 50000
 	ErrorEmailSend            = 50001
 	ErrorVerifyCodeEmpty      = 50002
@@ -54,8 +55,6 @@ const (
 	OrderExpire               = 600027
 	OrderPayCompleted         = 600028
 	UserAccountStateInvalid   = 600029
-	CommentsExist             = 600030
-	CommentsNotExist          = 600031
 	CommentsTagExist          = 600032
 	CommentsTagNotExist       = 600033
 	UserOrderNotExist         = 600034
